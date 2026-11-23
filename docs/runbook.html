@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Runbook · Pawn Parlor user guide</title>
+<meta name="description" content="When something goes wrong in Pawn Parlor: subscription locked, cancel, refund, a URL bar, no styling and offline.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Runbook · Pawn Parlor user guide">
+<meta property="og:description" content="When something goes wrong in Pawn Parlor: subscription locked, cancel, refund, a URL bar, no styling and offline.">
+<meta property="og:image" content="img/icon-192.png">
+<link rel="icon" type="image/png" href="img/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="index.html"><img src="img/icon-192.png" alt="" width="30" height="30"><span>pawn parlor</span></a>
+  <nav class="nav" aria-label="Guide pages"><ul><li><a href="index.html">home</a></li><li><a href="guide.html">guide</a></li><li><a href="cookbook.html">cookbook</a></li><li><a href="runbook.html" aria-current="page">runbook</a></li><li><a href="faq.html">faq</a></li><li><a href="report.html">report a bug</a></li></ul></nav>
+</header>
+<div class="wrap">
+<main id="main">
+<div class="eyebrow">~/runbook</div>
+<h1>Runbook</h1>
+<div class="underline" aria-hidden="true"></div>
+<p class="lede">When something is not right: what you see, why it happens, and the taps that fix it. Still stuck? <a href="report.html">Report a bug</a>.</p>
+<div class="tiles">
+<section class="tile" id="locked" aria-labelledby="locked-h"><div class="title" aria-hidden="true">fix</div><h2 id="locked-h">I subscribed but online play is still locked</h2>
+<p class="why">The app asks Google Play about your subscription when it starts, and again when you sign in or out. There is no separate restore button. It has to see the same Google account that paid, and the same Pawn Parlor account.</p><ol class="steps"><li>Close Pawn Parlor fully (swipe it away in recent apps) and open it again.</li><li>Open Settings, Account. The <code>Pawn Parlor Online</code> card should say <code>Active</code>. If it says <code>Checking your subscription</code>, wait a moment.</li><li>Sign in with the Pawn Parlor account you want to use. Signing in attaches the purchase to it.</li><li>Check the Google account. In Google Play tap your picture, Payments and subscriptions, Subscriptions. Pawn Parlor Online must be listed under the account that is signed in on this phone.</li><li>If Google Play says the payment is pending, it has not gone through yet. Wait for it.</li><li>Update Chrome and Google Play from Play, then open the app again.</li></ol><p>Still locked? Write to zanoski.marko@gmail.com with your phone model and the date you bought, but never send card details.</p>
+</section>
+<section class="tile" id="cancel" aria-labelledby="cancel-h"><div class="title" aria-hidden="true">fix</div><h2 id="cancel-h">Cancel the subscription</h2>
+<p class="why">Subscriptions are managed by Google Play, not by the app or the website.</p><ol class="steps"><li>Open Settings, Account, and tap <code>Manage or cancel in Google Play</code>.</li><li>Or open Google Play, tap your picture, Payments and subscriptions, Subscriptions, Pawn Parlor Online, and Cancel subscription.</li></ol><p>You keep online play to the end of the month you paid for. Bots stay free. Deleting your account does not cancel it, so cancel first.</p>
+</section>
+<section class="tile" id="refund" aria-labelledby="refund-h"><div class="title" aria-hidden="true">fix</div><h2 id="refund-h">Get a refund</h2>
+<p class="why">Refunds follow the Google Play refund policy, and Google Play makes the decision.</p><ol class="steps"><li>Within 48 hours of the purchase, ask on Google Play's refund page for the order. Your orders are at <a href="https://play.google.com/store/account/orderhistory">play.google.com/store/account/orderhistory</a>.</li><li>After 48 hours, or if the page does not let you, email zanoski.marko@gmail.com with the order number and the date. Do not send card details.</li><li>Cancel the subscription too, so it does not renew.</li></ol>
+</section>
+<section class="tile" id="urlbar" aria-labelledby="urlbar-h"><div class="title" aria-hidden="true">fix</div><h2 id="urlbar-h">A URL bar shows at the top</h2>
+<p class="why">The app is a full screen window on Chrome. It only goes full screen when Chrome has checked that the app and the website belong together. If that check fails, or Chrome is out of date, Chrome shows an address bar, and sometimes the short message Digital asset links verification failed.</p><ol class="steps"><li>Open Google Play, search Chrome and tap <code>Update</code>.</li><li>Update Pawn Parlor from Google Play too.</li><li>Close Pawn Parlor fully and open it again.</li><li>Do not disable Chrome. The app needs it.</li></ol><p>Still there? <a href="report.html">Report it</a> with your phone model, Android version and Chrome version.</p>
+</section>
+<section class="tile" id="chrome" aria-labelledby="chrome-h"><div class="title" aria-hidden="true">fix</div><h2 id="chrome-h">The page has no styling, or the board is broken</h2>
+<p class="why">The app runs on Chrome. An old Chrome cannot draw the pages, so you see plain text, no colours or a broken board.</p><ol class="steps"><li>Open Google Play, search Chrome and update it.</li><li>Open Settings, App, <code>Force update</code>, and tap <code>Update</code>.</li><li>Close the app and open it again.</li></ol>
+</section>
+<section class="tile" id="offline" aria-labelledby="offline-h"><div class="title" aria-hidden="true">fix</div><h2 id="offline-h">I am offline</h2>
+<p class="why">Online games are played on a server, so they pause without a connection. Games against bots run on your phone.</p><ol class="steps"><li>A banner says you are offline and online games are on hold, and the dialog <code>You are offline</code> explains it.</li><li>Tap <code>Wait for the connection</code>, or <code>Play offline</code> to play a bot.</li><li>Local games are saved on the device and counted in your on-device record.</li></ol><p>Nothing is lost: your online table is still there when the connection returns. Local games need no connection after the first load. Open the app once with a connection after you install it.</p>
+</section>
+<section class="tile" id="reconnect" aria-labelledby="reconnect-h"><div class="title" aria-hidden="true">fix</div><h2 id="reconnect-h">A game says connecting or reconnecting</h2>
+<p class="why">A weak connection, or the server being busy.</p><ol class="steps"><li>Check your wifi or mobile data.</li><li>Tap <code>Try again</code> if you see <code>This game could not be opened</code>.</li><li>Open the Status page: <a href="https://games.zanoski.com/status">games.zanoski.com/status</a> says whether the platform is working.</li></ol>
+</section>
+<section class="tile" id="opponent" aria-labelledby="opponent-h"><div class="title" aria-hidden="true">fix</div><h2 id="opponent-h">My opponent left</h2>
+<p class="why">Online games give a player a short time to reconnect.</p><ol class="steps"><li>Wait for the timer next to <code>disconnected</code>.</li><li>When it ends, tap <code>Claim victory</code>.</li></ol>
+</section>
+<section class="tile" id="verify" aria-labelledby="verify-h"><div class="title" aria-hidden="true">fix</div><h2 id="verify-h">The verification link does not work</h2>
+<p class="why">A link works once and expires after 24 hours.</p><ol class="steps"><li>Tap <code>Send a new link</code> on the verify page, or <code>Send the link again</code> after registering.</li><li>Open the newest email only.</li></ol>
+</section>
+<section class="tile" id="nochat" aria-labelledby="nochat-h"><div class="title" aria-hidden="true">fix</div><h2 id="nochat-h">I cannot chat</h2>
+<p class="why">Chat may be off for the game, or a moderator removed you from chat.</p><ol class="steps"><li>Look for <code>Chat is off for this game.</code> and tap <code>Turn chat on</code>.</li><li>If it says <code>You cannot chat right now.</code>, the message also shows when you can chat again. You can still play.</li></ol>
+</section>
+<section class="tile" id="empty" aria-labelledby="empty-h"><div class="title" aria-hidden="true">fix</div><h2 id="empty-h">The lobby list is empty</h2>
+<p class="why">Nobody listed a game right now. We cannot promise a busy lobby.</p><ol class="steps"><li>Tap <code>Refresh</code>.</li><li>Start a search, or host a game and invite a friend by link or QR.</li><li>Or play a bot, which is always free.</li></ol>
+</section>
+<section class="tile" id="notif" aria-labelledby="notif-h"><div class="title" aria-hidden="true">fix</div><h2 id="notif-h">No turn alerts</h2>
+<p class="why">Turn alerts are not promised inside the app yet.</p><ol class="steps"><li>Open Android settings, Apps, Pawn Parlor, Notifications, and allow them.</li><li>In Settings, Notifications, tap <code>Turn on</code> under <code>Turn alerts</code>.</li><li>Or turn on <code>Turn reminder emails</code>.</li></ol>
+</section>
+<section class="tile" id="stale" aria-labelledby="stale-h"><div class="title" aria-hidden="true">fix</div><h2 id="stale-h">The app looks out of date</h2>
+<p class="why">The pages are cached for speed.</p><ol class="steps"><li>Open Settings, App, <code>Force update</code>, <code>Update</code>.</li></ol>
+</section>
+<section class="tile" id="sound" aria-labelledby="sound-h"><div class="title" aria-hidden="true">fix</div><h2 id="sound-h">No sound, or too much vibration</h2>
+<p class="why">Sound or vibration is set low or muted.</p><ol class="steps"><li>Open Settings, Play.</li><li>Under <code>Sound</code> tap <code>Unmute</code> and check <code>Overall</code>.</li><li>Turn <code>Vibration</code> off if you do not like it.</li></ol>
+</section>
+<section class="tile" id="blocked" aria-labelledby="blocked-h"><div class="title" aria-hidden="true">fix</div><h2 id="blocked-h">I blocked someone by mistake</h2>
+<p class="why">Block hides their chat and keeps them away from your table.</p><ol class="steps"><li>Open Settings, Account, <code>Blocked players</code>.</li><li>Tap <code>Unblock</code>.</li></ol>
+</section>
+</div>
+
+</main>
+<footer>
+  <div class="tile quiet">
+  <ul>
+    <li><a href="https://play.google.com/store/apps/details?id=com.zanoshky.pawnparlor">Google Play</a></li>
+    <li><a href="https://games.zanoski.com">games.zanoski.com</a></li>
+    <li><a href="https://games.zanoski.com/privacy">Privacy</a></li>
+    <li><a href="https://games.zanoski.com/terms">Terms</a></li>
+    <li><a href="https://github.com/Zanoshky/pawn-parlor-app/issues">Issues</a></li>
+    <li><a href="https://github.com/Zanoshky/pawn-parlor-app/blob/main/LICENSE">License</a></li>
+  </ul>
+  <p>Guide text is shared under CC BY 4.0. The Pawn Parlor app itself is proprietary. Made by Marko Zanoski. Pawn Parlor is an independent app.</p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

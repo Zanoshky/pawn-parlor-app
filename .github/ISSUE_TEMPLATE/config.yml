@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: User guide
+    url: https://zanoshky.github.io/pawn-parlor-app/
+    about: Install, playing bots, the subscription, chat safety and answers to common questions.
+  - name: games.zanoski.com
+    url: https://games.zanoski.com
+    about: The Pawn Parlor website, with the privacy policy, the terms and contact details.
