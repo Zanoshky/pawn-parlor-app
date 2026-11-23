@@ -22,6 +22,7 @@
   --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -24px rgba(0, 0, 0, 0.9);
   --radius: 18px;
   --measure: 68ch;
+  --wrap: 1180px;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
@@ -81,12 +82,12 @@ code, kbd {
 
 .skip { position: absolute; left: 16px; top: -100px; z-index: 20; background: var(--card); color: var(--head); padding: 12px 16px; border-radius: 10px; border: 2px solid var(--link); }
 .skip:focus { top: 8px; }
-.wrap { max-width: 1180px; margin: 0 auto; }
+.wrap { max-width: var(--wrap); margin: 0 auto; }
 
 /* Top bar */
 .bar {
   position: sticky; top: 0; z-index: 10;
-  margin: 0 -20px; padding: 8px max(20px, calc((100vw - 1180px) / 2)); padding-top: calc(8px + env(safe-area-inset-top, 0px));
+  margin: 0 -20px; padding: 8px max(20px, calc((100vw - var(--wrap)) / 2)); padding-top: calc(8px + env(safe-area-inset-top, 0px));
   display: flex; align-items: center; gap: 8px 16px;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px);
@@ -268,8 +269,8 @@ footer ul { list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-w
 footer a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; margin-left: -8px; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } summary::after { transition: none; } }
-@media (min-width: 1800px) { .wrap { max-width: 1480px; } body { font-size: 19px; } }
-@media (min-width: 2600px) { .wrap { max-width: 1900px; } body { font-size: 21px; } }
+@media (min-width: 1800px) { :root { --wrap: 1480px; } body { font-size: 19px; } }
+@media (min-width: 2600px) { :root { --wrap: 1900px; } body { font-size: 21px; } }
 @media (max-width: 559px) { .stats li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 @media (max-width: 720px) {
   .nav { overflow: visible; }
@@ -279,3 +280,34 @@ footer a { display: inline-flex; align-items: center; min-height: 48px; padding:
   main { padding-block: 28px 40px; }
 }
 @media (max-width: 720px) { .bar { position: static; } html { scroll-padding-top: 16px; } section { scroll-margin-top: 16px; } }
+
+/* Home: quick start as four step cards, guide pages as link cards. */
+.band { margin: 56px 0 8px; }
+.band > h2 { font-size: clamp(28px, 3.8vw, 40px); margin-bottom: 22px; }
+.cards4, .linkcards { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.cards4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); counter-reset: none; }
+.cards4 li {
+  position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 22px 8px; box-shadow: var(--shadow);
+}
+.cards4 h3 { margin: 14px 0 6px; font-size: 22px; }
+.cards4 p { color: var(--fg); font-size: 17px; line-height: 1.6; }
+.cards4 .k {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px;
+  font: 700 18px/1 var(--sans); color: var(--accent-ink); background: linear-gradient(180deg, #ffc68f, #e8913a);
+  box-shadow: 0 8px 20px -10px rgba(232, 145, 58, 0.9);
+}
+.linkcards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.linkcards a {
+  display: flex; flex-direction: column; gap: 6px; height: 100%; min-height: 120px; padding: 20px 22px 22px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg); transition: border-color 0.15s, transform 0.15s, background 0.15s;
+}
+.linkcards b { display: flex; align-items: center; justify-content: space-between; gap: 10px; font: 700 22px/1.2 var(--serif); color: var(--head); }
+.linkcards b::after { content: "\2192"; font: 600 20px/1 var(--sans); color: var(--link); transition: transform 0.15s; }
+.linkcards span { color: var(--dim); font-size: 16px; line-height: 1.5; }
+.linkcards a:hover { border-color: var(--line-strong); background: var(--card-2); transform: translateY(-2px); }
+.linkcards a:hover b::after { transform: translateX(4px); }
+.price { margin: -4px 0 18px; color: var(--dim); }
+.price b { font: 700 30px/1 var(--serif); color: var(--link); margin-right: 4px; }
+@media (prefers-reduced-motion: reduce) { .linkcards a, .linkcards b::after { transition: none; } .linkcards a:hover { transform: none; } }
