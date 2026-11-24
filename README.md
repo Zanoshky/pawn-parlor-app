@@ -47,7 +47,7 @@ The guide source is plain HTML in [docs](docs).
 2. Otherwise open a [bug report](https://github.com/Zanoshky/pawn-parlor-app/issues/new?template=bug_report.yml) or a [feature request](https://github.com/Zanoshky/pawn-parlor-app/issues/new?template=feature_request.yml).
 3. Add your app version, phone model, Android version and Chrome version, and a screenshot if you can. Crop out anything private first: issues are public.
 
-No GitHub account? Write to zanoski.marko@gmail.com.
+No GitHub account? Write to support@zanoski.com.
 
 ## License
 
